@@ -6,23 +6,29 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <script src="traducor.js"></script>
+
     <header>
         <aside>
             <a href="PaginaPrincipal.html">Pagina principal</a>
-        <a href="traducot.html">Traducctor</a>
+            <a href="traducot.html">Traductor</a>
     </header>
     <nav>
-    <div class="container">
-        <h1>Traductor de K'iche'</h1>
-        <textarea id="texto" placeholder="Escribe una palabra o frase"></textarea>
-        <select id="idioma">
-            <option value="es">Español</option> 
-        </select>
-        <br>
-        <button onclick="traducir()">Traducir</button>
-        <div id="resultado"></div>
-    </div>
+        <div class="container">
+            <h1>Traductor de K'iche'</h1>
+            <textarea id="texto"></textarea>
+            <br>
+            <button onclick="traducir()">Traducir</button>
+            <div id="resultado"></div>
+      </div>
 </nav>
-    <script src="traducor.js"></script>
-</body>
+<nav>
+        <div class="container">
+        <h1>Deja tu sugerencia</h1>
+        <textarea id="texto"></textarea>
+        <br>
+        <button onclick="MostrarMensaje()">Enviar</button>
+        <div id="mensajeResultado"></div>
+      </div>
+      <body>
 </html>
