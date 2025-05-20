@@ -1,39 +1,34 @@
-async function traducir() {
-    const texto = document.getElementById('texto').value;
-  
-    const res = await fetch('/translate', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({ texto })
-    });
+js 
+const input = document.getElementById('texto');
+const resultado = document.getElementById('resultado');
 
-    const resultado = document.getElementById('resultado');
-    if (res.ok) {
-        const data = await res.json();
-        resultado.innerHTML = `Traducción: ${data.traduccion} <br> Validado: ${data.validado ? 'Sí' : 'No'}`;
-    } else {
-        resultado.innerHTML = 'Traducción no encontrada/No válida';
-    }
-}
-  
-async function MostrarMensaje() {
-    const mensaje = document.getElementById('MostrarMensaje').value;
-  
-    const res = await fetch('/translate', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({ mensaje })
-    });
+let timeout = null;
 
-    const resultado = document.getElementById('mensajeResultado');
-    if (res.ok) {
-        const data = await res.json();
-        resultado.innerHTML = `Mensaje: ${data.mensaje} <br> Validado: ${data.validado ? 'Sí' : 'No'}`;
-    } 
-}
-  
+input.addEventListener('input', () => {
+    clearTimeout(timeout);
 
+    timeout = setTimeout(async () => {
+        const texto = input.value.trim();
+
+        if (texto === "") {
+            resultado.innerHTML = "";
+            return;
+        }
+
+        const res = await fetch('http://localhost:8000/translate', {
+            method: 'POST',
+            headers: {
+                
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ texto: texto })
+        });
+
+        if (res.ok) {
+            const data = await res.json();
+            resultado.innerHTML = `Traducción: ${data.traduccion}`;
+        } else {
+            resultado.innerHTML = 'Error al traducir';
+        }
+    }, 500);
+});
