@@ -1,5 +1,5 @@
 const diccionario = {
-  "Tía" : "Ch'utinan", 
+  "tía" : "Ch'utinan", 
   "primo(a)":"Ukab' achalaxik" ,
   "sobrino(a)":"Ikaq'",
   "padrino":"Yuwa'chinb'ej, tatyox " ,
@@ -14,7 +14,20 @@ const diccionario = {
   "día": "qʼij",
   "noche": "aqʼabʼ",
   "mamá": "nan",
-  "papá": "Tat" 
+  "papá": "Tat" ,
+  "cuerpo":"B'aqil, Ch'akul",
+ "hueso":"B'aq",
+ "bigote":"Ismachi'",
+ "corazón":"Anima'",
+ "boca":"Chi',aj",
+ "sangre": "Kik'el",
+ "lengua":"Aq'",
+ "garaganta": "Qulaj",
+  "brazo":"Talab', Teleb'",
+  "ojo":"B'oq'ochaj",
+  "oreja":"Xikinaj",
+  "rodilla":"Ch'ek",
+  
 };
 
 function traducir() {
@@ -22,8 +35,8 @@ function traducir() {
   const resultado = document.getElementById("resultado");
 
   if (palabra in diccionario) {
-    resultado.textContent = ` En K'iche'la palabra ${palabra} es: ${diccionario[palabra]}"`;
+    resultado.textContent = ` En K'iche'la palabra ${palabra} es: "${diccionario[palabra]}"`;
   } else {
-    resultado.textContent = " Palabra no encontrada en el diccionario.";
+    resultado.textContent = " Palabra no encontrada en el diccionario. Asegurese de que la palabra esté escrita correctamente.";
   }
 }
