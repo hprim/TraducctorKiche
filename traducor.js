@@ -27,7 +27,11 @@ const diccionario = {
   "ojo":"B'oq'ochaj",
   "oreja":"Xikinaj",
   "rodilla":"Ch'ek",
-  
+  "nariz":"Tza'maj",
+  "piel": "Tz'umal",
+  "cabello":"Wi'aj",
+  "vientre":"pam",
+
 };
 
 function traducir() {
