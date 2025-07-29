@@ -43,8 +43,26 @@ const diccionario = {
   "hombros":"Teleb'aj",
   "párpados":"Rij b'aq'och",
   "uña":"Ixk'iq",
+  "cabeza":"Jolomaj",
+  "cuello":"Qul",
+  "pecho":"Uwach k'uxal",
+  "dedo de la mano":"Uwi' qab' aj",
+  "dedo del pie":"Uwi' aqanaj",
+  "dientes": "Were",
+  "yo":"In",
+  "tú":"At",
+  "usted":"Lal",
+  "el":"Are'",
+  "ella":"Are'",
+  "nosotros":"Uj",
+  "vosotros":"E are'",
+  "ustedes":"Alaq",
+  "ellos":"E are'",
+  "ellas":"E are'",
+  "casa":"Ja",
+  "sala":"Ja riqb' al ib'",
 
-function traducir() {
+  function traducir() {
   const palabra = document.getElementById("input-word").value.toLowerCase().trim();
   const resultado = document.getElementById("resultado");
 
