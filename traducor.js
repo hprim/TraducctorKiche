@@ -19,7 +19,7 @@ const diccionario = {
  "hueso":"B'aq",
  "bigote":"Ismachi'",
  "corazón":"Anima'",
- "boca":"Chi',aj",
+ "boca":"Chi'aj",
  "sangre": "Kik'el",
  "lengua":"Aq'",
  "garaganta": "Qulaj",
@@ -31,8 +31,18 @@ const diccionario = {
   "piel": "Tz'umal",
   "cabello":"Wi'aj",
   "vientre":"pam",
-
-};
+  "labio": "Chi'aj",
+  "pulmón":"Poror, pospo'y",
+  "pierna":"Aqanaj",
+  "espalda":"Wij",
+  "lágrima":"Uwal b'oq'och",
+  "mano":"Q'ab'aj",
+  "pestaña":"Metz'aj",
+  "Codo":"Chu'u'k",
+  "cintura":"Xe'pam",
+  "hombros":"Teleb'aj",
+  "párpados":"Rij b'aq'och",
+  "uña":"Ixk'iq",
 
 function traducir() {
   const palabra = document.getElementById("input-word").value.toLowerCase().trim();
