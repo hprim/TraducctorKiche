@@ -16,13 +16,13 @@ const diccionario = {
   "mamá": "nan",
   "papá": "Tat" ,
   "cuerpo":"B'aqil, Ch'akul",
- "hueso":"B'aq",
- "bigote":"Ismachi'",
- "corazón":"Anima'",
- "boca":"Chi'aj",
- "sangre": "Kik'el",
- "lengua":"Aq'",
- "garaganta": "Qulaj",
+  "hueso":"B'aq",
+  "bigote":"Ismachi'",
+  "corazón":"Anima'",
+  "boca":"Chi'aj",
+  "sangre": "Kik'el",
+  "lengua":"Aq'",
+  "garaganta": "Qulaj",
   "brazo":"Talab', Teleb'",
   "ojo":"B'oq'ochaj",
   "oreja":"Xikinaj",
@@ -38,7 +38,7 @@ const diccionario = {
   "lágrima":"Uwal b'oq'och",
   "mano":"Q'ab'aj",
   "pestaña":"Metz'aj",
-  "Codo":"Chu'u'k",
+  "codo":"Chu'u'k",
   "cintura":"Xe'pam",
   "hombros":"Teleb'aj",
   "párpados":"Rij b'aq'och",
@@ -55,20 +55,31 @@ const diccionario = {
   "el":"Are'",
   "ella":"Are'",
   "nosotros":"Uj",
-  "vosotros":"E are'",
   "ustedes":"Alaq",
   "ellos":"E are'",
-  "ellas":"E are'",
   "casa":"Ja",
   "sala":"Ja riqb' al ib'",
+  "dormitorio":"Ja rech warem",
+  "patio" : "Uwo ja",
+  "jardín":"Tikb' al kotz'ij",
+  "cocina" : "B'anb'al wa",
+  "garaje" : "K'olb' al Ch'ich'",
+  "baño" : "Ja rech atinem",
+  "comedor" : 'ja rech nem',
+  "cuarto" : "Nitz' ja",
+  "gradas" : "Q'am b'e",
+  "flores" : "Kotz'ij",
+  "Ventana" :
+};
 
-  function traducir() {
+function traducir() {
   const palabra = document.getElementById("input-word").value.toLowerCase().trim();
   const resultado = document.getElementById("resultado");
 
   if (palabra in diccionario) {
-    resultado.textContent = ` En K'iche'la palabra ${palabra} es: "${diccionario[palabra]}"`;
+    resultado.textContent = ` En K'iche' la palabra ${palabra} es: "${diccionario[palabra]}"`;
   } else {
-    resultado.textContent = " Palabra no encontrada en el diccionario. Asegurese de que la palabra esté escrita correctamente.";
+    resultado.textContent = " Palabra no encontrada en el diccionario. Asegúrese de que la palabra esté escrita correctamente.";
+    document.getElementById("texto").value = ""; 
   }
 }
