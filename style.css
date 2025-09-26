@@ -1,12 +1,12 @@
 body{
-    background-color: #282429;
+    background-color: rgb(225, 175, 175);
     font-family: 'Courier New', Courier, monospace;
 }
 header{
     text-align: center;
     box-sizing: border-box;
     background-color: #ffffff;
-    color: rgb(21, 19, 19);
+    color: rgb(225, 175, 175);
     margin: 20px 2% 2%;
     padding: 50px 0px;
     border-radius: 10px;
@@ -24,7 +24,7 @@ nav{
 nav h1{
     font-size: 2em;
     margin: 0px;
-    color: #783f8e;
+    color:  rgb(112, 74, 74);
 }
   
   input {
