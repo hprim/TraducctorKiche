@@ -9,3 +9,5 @@ function MostrarMensaje() {
         document.getElementById("texto").value = ""; // limpia el textarea
       }
     }
+
+    

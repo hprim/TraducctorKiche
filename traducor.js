@@ -106,7 +106,7 @@ function traducir() {
   const resultado = document.getElementById("resultado");
 
   if (palabra in diccionario) {
-    resultado.textContent = ` En K'iche' la palabra ${palabra} es: "${diccionario[palabra]}"`;
+    resultado.textContent = ` En Kiche' la palabra ${palabra} es: "${diccionario[palabra]}"`;
   } else {
     resultado.textContent = " Palabra no encontrada en el diccionario. Asegúrese de que la palabra esté escrita correctamente.";
     document.getElementById("texto").value = ""; 
