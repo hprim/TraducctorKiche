@@ -98,7 +98,28 @@ const diccionario = {
   "yeso":"Chuntz'ib'",
   "muletas":"Jekb'inb'äl",
   "monedero":"Pwaqb'äl",
-  "micrófono":"Taqb'äl"
+  "micrófono":"Taqb'äl",
+  "0":"Majun",
+  "1":"Jun",
+  "2":"Kab'",
+  "3":"Oxib'",
+  "4":"Kajib'",
+  "5":"Job'",
+  "6":"Waqib'",
+  "7":"Waqib'",
+  "8":"Wajxaqib'",
+  "9":"B'elejeb'",
+  "10":"Lajuj",
+  "11":"Julajuj",
+  "12":"Kab'julajuj",
+  "13":"Oxlajuj",
+  "14":"Kajlajuj",
+  "15":"Jo'lajuj",
+  "16":"Waqlajuj",
+  "17":"Wuqlajuj",
+  "18":"Wajxaqlajuj",
+  "19":"B'elejlajuj",
+  "20":"Juk'al"
 };
 
 function traducir() {
@@ -106,7 +127,7 @@ function traducir() {
   const resultado = document.getElementById("resultado");
 
   if (palabra in diccionario) {
-    resultado.textContent = ` En Kiche' la palabra ${palabra} es: "${diccionario[palabra]}"`;
+    resultado.textContent = ` En Kiche' ${palabra} es: "${diccionario[palabra]}"`;
   } else {
     resultado.textContent = " Palabra no encontrada en el diccionario. Asegúrese de que la palabra esté escrita correctamente.";
     document.getElementById("texto").value = ""; 

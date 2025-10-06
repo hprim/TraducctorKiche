@@ -2,7 +2,7 @@ function reproducir() {
     const texto = document.getElementById("resultado").textContent;
     if (texto.trim() !== "") {
       const speech = new SpeechSynthesisUtterance(texto);
-      speech.lang = "es-GT"; // idioma de la voz (puedes poner "quc" si tu navegador lo soporta)
+      speech.lang = "quc-GT";
       window.speechSynthesis.speak(speech);
     }
   }
